@@ -18,7 +18,9 @@ By implementing skills learnt throughout the module, an attempt at the challenge
 
 ### Overview
 
-Explain the purpose of this analysis.
+From BootCamp Spot:
+
+> With your knowledge of machine learning and neural networks, you’ll use the features in the provided dataset to create a binary classifier that can predict whether applicants will be successful if funded by Alphabet Soup.
 
 ### Results
 
@@ -26,11 +28,40 @@ Using bulleted lists and images to support your answers, address the following q
 
 #### Data Preprocessing
 
-What variable(s) are the target(s) for your model?
-What variable(s) are the features for your model?
-What variable(s) should be removed from the input data because they are neither targets nor features?
+- As we are trying to predict whether applicants will be successful if funded by Alphabet Soup, the main variable we would want to look at is the `IS_SUCCESSFUL` variable, which denotes whether the funding was used effectively.
+- The variables that are the features for the model are:
+
+  - `APPLICATION_TYPE`, Alphabet Soup application type
+  - `CLASSIFICATION`, Government organisation classification
+  - `AFFILIATION`, Affiliated sector of the industry
+  - `USE_CASE`, Use of funding
+  - `ORGANIZATION`, Organisation type
+  - `STATUS`, Active status of funding
+  - `INCOME_AMT`, Income classification
+  - `SPECIAL_CONSIDERATIONS`, Special considerations for the application
+  - `ASK_AMT`, The amount of funding requested
+- `EIN` and `NAME` were removed from the data as they were neither targets nor features.
 
 #### Compiling, Training, and Evaluating the Model
+
+- The initial model had three total layers
+![Model with three layers](Images/Inital_model.png)
+
+  - The hidden layers were given activation `ReLU` because of its effectiveness in dealing with vanishing gradients due to its ability to introduce nonlinearity to the data
+  - The output layer was given 1 neuron and activation `sigmoid` as there was only two possible answers; `0` and `1`
+  - After training with epoch set to 100, the model recorded an accuracy of 72.8%
+  ![Evaluation of model with 72.8% accuracy](Images/Initial_model_accuracy.png)
+  - The initial model did not reach target model performance
+
+- Modifications for the first optimisation model: **UNSUCCESSFUL**
+
+  - Removed `SPECIAL_CONSIDERATIONS` and `STATUS`
+  - Added an additional hidden layer
+  ![Optimisation attempt 1 model](Images/Optimisation_1_model.png)
+  - After training with epoch set to 200, accuracy remained the same (72.8%)
+  ![Training with epoch = 200, accuracy = 72.8%](Images/Optimisation_1_accuracy.png)
+
+- Modifications for the second optimisation model: 
 
 How many neurons, layers, and activation functions did you select for your neural network model, and why?
 Were you able to achieve the target model performance?
