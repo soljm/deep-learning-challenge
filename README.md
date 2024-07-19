@@ -6,13 +6,15 @@ By implementing skills learnt throughout the module, an attempt at the challenge
 
 ## Contents
 
+- `Images` folder
+  - 8 `.png` files with images used in this README
 - `Model_Results` folder
   - `AlphabetSoupCharity.h5` file with first test results
-  - `AlphabetSoupCharity_Optimisation_1.h5` file with optimisation attempt 1 (73%)
-  - `AlphabetSoupCharity_Optimisation_2.h5` file with optimisation attempt 2 ()
-  - `AlphabetSoupCharity_Optimisation_3.h5` file with optimisation attempt 3 ()
+  - `AlphabetSoupCharity_Optimisation_1.h5` file with optimisation attempt 1 (72.8%)
+  - `AlphabetSoupCharity_Optimisation_2.h5` file with optimisation attempt 2 (72.5%)
+  - `AlphabetSoupCharity_Optimisation_3.h5` file with optimisation attempt 3 (72.8%)
 - `AlphabetSoupCharity.ipynb` file with main code
-- `AlphabetSoupCharity-Optimisation.ipynb` file with optimisation attempts
+- `AlphabetSoupCharity-Optimisation.ipynb` file for optimisation attempts
 
 ## Alphabet Soup Neural Network Model Analysis
 
@@ -23,8 +25,6 @@ From BootCamp Spot:
 > With your knowledge of machine learning and neural networks, you’ll use the features in the provided dataset to create a binary classifier that can predict whether applicants will be successful if funded by Alphabet Soup.
 
 ### Results
-
-Using bulleted lists and images to support your answers, address the following questions:
 
 #### Data Preprocessing
 
@@ -85,7 +85,9 @@ Using bulleted lists and images to support your answers, address the following q
 
 ### Summary
 
-Summarise the overall results of the deep learning model. Include a recommendation for how a different model could solve this classification problem, and then explain your recommendation.
+Overall, the deep learning model could not achieve the target model performance of 75% despite numerous attempts of modifying the model.
+
+In terms of recommendation of a different model, it may be worthwhile to try the Random Forest model. Neural networks generally need more time to be invested to train the model over the dataset and usually works better with a larger dataset as a result. On the other hand, Random Forest can work with the relatively small dataset we have in this challenge. It is also recommended over something like the Support Vector Machines (SVM) because SVM can only handle two-dimensional data and may not perform well with the extra information of the dataset (i.e., will require a lot of data cleaning and may not be accurate to the type of training that we want). Random Forest is also less prone to overfitting, where it cannot generalise the data and fits to the training data, consequently performing poor with the testing data.
 
 ## Credits
 
