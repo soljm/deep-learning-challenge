@@ -53,7 +53,7 @@ Using bulleted lists and images to support your answers, address the following q
   ![Evaluation of model with 72.8% accuracy](Images/Initial_model_accuracy.png)
   - The initial model did not reach target model performance
 
-- Modifications for the first optimisation model: **UNSUCCESSFUL**
+- Modifications for the first optimisation attempt: **UNSUCCESSFUL**
 
   - Removed `SPECIAL_CONSIDERATIONS` and `STATUS`
   - Added an additional hidden layer
@@ -61,11 +61,27 @@ Using bulleted lists and images to support your answers, address the following q
   - After training with epoch set to 200, accuracy remained the same (72.8%)
   ![Training with epoch = 200, accuracy = 72.8%](Images/Optimisation_1_accuracy.png)
 
-- Modifications for the second optimisation model: 
+- Modifications for the second optimisation attempt: **UNSUCCESSFUL**
 
-How many neurons, layers, and activation functions did you select for your neural network model, and why?
-Were you able to achieve the target model performance?
-What steps did you take in your attempts to increase model performance?
+  - Change conditional for replacing application (from 200 to 1000)
+  - Added two additional hidden layers
+  ![Optimisation attempt 2 model](Images/Optimisation_2_model.png)
+  - After training with epoch set to 300, accuracy lowered to 72.5%
+  ![Training with epoch = 300, accuracy = 72.5%](Images/Optimisation_2_accuracy.png)
+
+- Modifications for the third optimisation attempt: **UNSUCCESSFUL**
+
+  - Removed `ASK_AMT`
+  - Change number of bins for `APPLICATION_TYPE` and `CLASSIFICATION`
+
+    - For both, binned `Under 100` together and `Under 1000` together
+
+  - Added three hidden layers
+  ![Optimisation attempt 3 model](Images/Optimisation_3_model.png)
+  - After training with epoch set to 300, accuracy remained the same at 72.8%
+  ![Training with epoch = 300, accuracy = 72.8%](Images/Optimisation_3_accuracy.png)
+
+> Note that all modifications listed are the differences from the initial model, not from the previous optimisation model.
 
 ### Summary
 
