@@ -6,7 +6,13 @@ By implementing skills learnt throughout the module, an attempt at the challenge
 
 ## Contents
 
-- `Alphabet_Soup.ipynb` file with main code
+- `Model_Results` folder
+  - `AlphabetSoupCharity.h5` file with first test results
+  - `AlphabetSoupCharity_Optimisation_1.h5` file with optimisation attempt 1 (73%)
+  - `AlphabetSoupCharity_Optimisation_2.h5` file with optimisation attempt 2 ()
+  - `AlphabetSoupCharity_Optimisation_3.h5` file with optimisation attempt 3 ()
+- `AlphabetSoupCharity.ipynb` file with main code
+- `AlphabetSoupCharity-Optimisation.ipynb` file with optimisation attempts
 
 ## Alphabet Soup Neural Network Model Analysis
 
